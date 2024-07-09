@@ -1,0 +1,33 @@
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'marquee-text' %}
+      <div class="marquee-text">
+        {{ block.settings.marquee__text }}
+      </div>
+  {% endcase %}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Marquee",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "text",
+      "id": "marquee-text"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "marquee",
+      "type": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "marquee-text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
