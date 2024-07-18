@@ -163,6 +163,7 @@
         "image-with-text-0",
         "image-with-text-1"
       ],
+      "disabled": true,
       "settings": {
         "height": "small",
         "desktop_image_width": "medium",
@@ -204,6 +205,7 @@
         "column-0",
         "column-1"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -221,8 +223,14 @@
         "padding_bottom": 36
       }
     },
+    "pre_order_DhWLMe": {
+      "type": "pre-order",
+      "settings": {
+      }
+    },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -238,6 +246,16 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "add_to_cart_PkAMPY": {
+      "type": "add-to-cart",
+      "settings": {
+      }
+    },
+    "be_to_be_WrkXtx": {
+      "type": "be-to-be",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -245,6 +263,9 @@
     "main",
     "image-with-text",
     "multicolumn",
-    "related-products"
+    "pre_order_DhWLMe",
+    "related-products",
+    "add_to_cart_PkAMPY",
+    "be_to_be_WrkXtx"
   ]
 }

@@ -1,0 +1,20 @@
+{% if product.metafields.custom.add_to_cart.value %}
+  <div class="button-cart">
+    <button type="submit" name="cart" id="AddToCart">
+      <span>Add to cart</span>
+    </button>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Add to cart",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Add to cart",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,22 @@
+{% if product.metafields.custom.pre_order.value %}
+  <div class="pre-order">
+    <p>Précommander ce produit maintenant</p>
+  </div>
+{% else %}
+  <div class="pre-order">
+    <p>Ce produit n'est pas disponible en précommande</p>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Pre-order",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Pre-order",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

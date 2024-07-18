@@ -1,0 +1,36 @@
+{% assign menu_be_to_be_handle = 'menu-be-to-be' %}
+{% assign main_menu_handle = 'main-menu' %}
+
+<div class="header-menu">
+  <ul>
+    {% assign main_menu_links = linklists[main_menu_handle] %}
+    {% for link in main_menu_links.links %}
+      <li>
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </li>
+    {% endfor %}
+    {% if customer.tags contains 'be to be' %}
+      {% if customer %}
+        {% assign be_to_be_links = linklists[menu_be_to_be_handle] %}
+        {% for link in be_to_be_links.links %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Be to be menu",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Menu",
+      "category": "Menu"
+    }
+  ]
+}
+{% endschema %}
