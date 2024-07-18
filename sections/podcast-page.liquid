@@ -1,0 +1,160 @@
+{{ 'podcast-page.css' | asset_url | stylesheet_tag }}
+
+<section class="podcast-details">
+  <div class="all-image">
+    <img
+      class="main-image"
+      src="{{ section.settings.main-image | image_url }}"
+      alt="{{ section.settings.alt }}"
+      height="{{ section.settings.image.height }}"
+      width="{{ section.settings.image.width }}"
+    >
+    <img
+      class="image-label"
+      src="{{ section.settings.image_label | image_url }}"
+      alt=" {{ section.blocks.image_label.alt }}"
+      height="{{ section.blocks.image_label.height }}"
+      width="{{ section.blocks.image_label.width }}"
+    >
+  </div>
+  <div class="podcast-top">
+    {% for block in section.blocks %}
+      <h1>{{ block.settings.title }}</h1>
+    {% endfor %}
+    <div class="podcast-recommendation">
+      {% assign rating_value = section.settings.rating_value | plus: 0 %}
+      {% assign rating_decimal = section.settings.rating_decimal | plus: 0 %}
+      <div class="rating-star" style="--rating: {{ rating_value }}; --rating-decimal: {{ rating_decimal }};">
+        <p class="podcast-avis">{{ section.settings.avis }}</p>
+      </div>
+    </div>
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'description' %}
+          <div class="description-text">
+            <p class="description">{{ block.settings.description }}</p>
+          </div>
+          <div class="our-obligation-podcast">
+        {% when 'image-podcast' %}
+          <div class="image-podcast">
+            <div>
+              <img
+                src="{{ block.settings.image-podcast | image_url }}"
+                alt="{{ block.settings.alt }}"
+                height="{{ block.settings.image.height }}"
+                width="{{ block.settings.image.width }}"
+              >
+              <div class="obligation-text">{{ block.settings.obligation_text }}</div>
+            </div>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  {% for block in section.blocks %}
+    <a href="{{ block.settings.button_link }}" class="button-link">{{ block.settings.button_label }}</a>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Podcast page",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "main-image",
+      "label": "Main image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_label",
+      "label": "Image Bliss Stories"
+    },
+
+    {
+      "type": "text",
+      "id": "avis",
+      "label": "Avis"
+    },
+    {
+      "type": "range",
+      "id": "rating_value",
+      "label": "Rating value",
+      "default": 3,
+      "min": 0,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "rating_decimal",
+      "label": "Rating decimal",
+      "default": 0.2,
+      "min": 0,
+      "max": 0.9,
+      "step": 0.1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Title",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "image-podcast",
+      "name": "Image podcast",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image-podcast",
+          "label": "Image podcast"
+        },
+        {
+          "type": "text",
+          "id": "obligation_text",
+          "label": "Detail text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Podcast page",
+      "category": "Podcast"
+    }
+  ]
+}
+{% endschema %}

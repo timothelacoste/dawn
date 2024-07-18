@@ -1,0 +1,38 @@
+{{ 'marquee.css' | asset_url | stylesheet_tag }}
+
+<div class="marquees">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'marquee-text' %}
+        <div class="marquee-text">
+          {{ block.settings['marquee-text'] }}
+        </div>
+    {% endcase %}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Marquee",
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "name": "marquee",
+      "type": "marquee-text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "marquee-text",
+          "label": "Marquee Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

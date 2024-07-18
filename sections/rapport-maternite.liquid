@@ -1,0 +1,44 @@
+{{ 'rapport-maternite.css' | asset_url | stylesheet_tag }}
+
+<section class="rapport-maternite">
+  {% for block in section.blocks %}
+    <img src="{{block.settings.image | image_url}}" alt="{{block.settings.title}}" height="" width="">
+    <div class="maternite-text">{{ block.settings.title }}</div>
+    <div class="interview">{{ block.settings.author }}</div>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Rapport maternité",
+  "max_blocks": 1,
+  "blocks": [
+    {
+      "type": "rapport-maternite",
+      "name": "rapport-maternite",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "author",
+          "label": "Author"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rapport maternité"
+    }
+  ]
+}
+{% endschema %}

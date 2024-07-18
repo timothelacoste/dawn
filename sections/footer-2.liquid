@@ -1,0 +1,64 @@
+{{ 'footer-2.css' | asset_url | stylesheet_tag }}
+
+<footer class="footer">
+  <div class="footer-top">
+    <h2>{{ section.settings.title }}</h2>
+    <div class="footer-icons">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.image_link }}">
+          <img
+            src="{{ block.settings.image | image_url }}"
+            alt="{{ block.settings.image.alt }}"
+            height="{{ block.settings.image.height }}"
+            width="{{ block.settings.image.width }}"
+          >
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "footer-top",
+      "name": "Footer Top",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "Image Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer-Top",
+      "category": "Footer",
+      "blocks": [
+        {
+          "type": "footer-top"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

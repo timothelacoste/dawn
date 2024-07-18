@@ -166,6 +166,10 @@
   width: 100%;
 }
 
+.banner__media img {
+  object-fit: fill;
+}
+
 .banner__media-half {
   width: 50%;
 }
@@ -369,6 +373,24 @@
 
   .banner--desktop-transparent .button--secondary {
     --alpha-button-background: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .banner--desktop-transparent .button--secondary:hover {
+    --color-button: 255, 249, 237;
+    --alpha-button-background: 1;
+    --color-button-text: 0, 0, 0;
+
+    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+        rgba(var(--color-button), var(--border-opacity)),
+      0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+  }
+
+  .banner--desktop-transparent .button--secondary:not([disabled]):hover:after {
+    --border-offset: 1.3px;
+    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+        rgba(var(--color-button), var(--border-opacity)),
+      0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
   }
 
   .banner--desktop-transparent .content-container:after {
@@ -437,6 +459,15 @@
   margin-bottom: 0;
 }
 
+.banner__heading p {
+  color: #fffd45;
+  font-family: 'Bodoni 72';
+  font-size: 135px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .banner__box .banner__heading + * {
   margin-top: 1rem;
 }
@@ -447,6 +478,19 @@
   gap: 1rem;
   max-width: 45rem;
   word-break: break-word;
+}
+
+.banner__buttons a {
+  border-radius: 110px;
+  border: 1px solid #f7f366;
+  background: rgba(217, 217, 217, 0);
+  color: #f7f366;
+  text-align: center;
+  font-family: 'Bodoni';
+  font-size: 40px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 749px) {

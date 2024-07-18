@@ -1,0 +1,103 @@
+{{ 'futures-meres.css' | asset_url | stylesheet_tag }}
+
+<section class="products" id="products">
+  <h2>{{ section.settings.title }}</h2>
+  <div class="products-grid">
+    {% for block in section.blocks %}
+      <div class="product">
+        <a href="{{ block.settings.product-url }}">
+          <div class="product-best">{{ block.settings['best-seller'] }}</div>
+          <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.article-title }}" height="" width="">
+          <div class="product-description">
+            <h3>{{ block.settings['article-title'] }}</h3>
+            <div class="image-with-text__review">
+              <div class="rating-wrapper">
+                {% assign rating_value = block.settings.rating_value | plus: 0 %}
+                {% assign rating_decimal = block.settings.rating_decimal | plus: 0 %}
+                <div
+                  class="rating-star"
+                  style="--rating: {{ rating_value }}; --rating-decimal: {{ rating_decimal }};"
+                ></div>
+                <p class="product-avis">({{ block.settings.avis }})</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "future-meres",
+
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<h2>Pour les <em>(futures)</em> mères</h2>"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Article",
+      "type": "article",
+      "settings": [
+        {
+          "type": "text",
+          "id": "article-title",
+          "label": "Article title",
+          "default": "Article title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "best-seller",
+          "label": "Best Seller",
+          "default": "Best Seller"
+        },
+        {
+          "type": "text",
+          "id": "avis",
+          "label": "Avis",
+          "default": "150 avis"
+        },
+        {
+          "type": "range",
+          "id": "rating_value",
+          "label": "Number of Stars",
+          "default": 4,
+          "min": 0,
+          "max": 5,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "rating_decimal",
+          "label": "Decimal of Stars",
+          "default": 0,
+          "min": 0,
+          "max": 0.9,
+          "step": 0.1
+        },
+        {
+          "type": "url",
+          "id": "product-url",
+          "label": "Product URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "futures-meres"
+    }
+  ]
+}
+{% endschema %}

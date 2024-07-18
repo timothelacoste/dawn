@@ -3,25 +3,19 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "heading": {
+        "heading_cPnapX": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "use_bodoni": false,
+            "heading": "<p>BLISS STORIES<\/p>",
+            "heading_size": "h1"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
+            "button_label_1": "ÉCOUTER LE PODCAST",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -30,181 +24,255 @@
         }
       },
       "block_order": [
-        "heading",
-        "text",
+        "heading_cPnapX",
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify:\/\/shop_images\/pieds_1.png",
+        "image_overlay_opacity": 0,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "mobile_image_height": "large",
+        "desktop_content_position": "middle-center",
+        "mobile_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "abonner_podcasts_xaPR6H": {
+      "type": "abonner-podcasts",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "image_YeNEBG": {
+          "type": "image",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "image": "shopify:\/\/shop_images\/Layer_1.png"
           }
         },
-        "text": {
+        "image_3i77Rb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Calque_1.png"
+          }
+        },
+        "image_jTthzn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Calque_1_1.png"
+          }
+        },
+        "image_XdVdab": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_YeNEBG",
+        "image_3i77Rb",
+        "image_jTthzn",
+        "image_XdVdab"
+      ],
+      "settings": {
+        "title": "Disponible sur toutes les plateformes d'écoutes",
+        "link": "",
+        "link_text": "s'abonner au podcast"
+      }
+    },
+    "podcast_page_3AmaX9": {
+      "type": "podcast-page",
+      "blocks": {
+        "title_tnKgVb": {
+          "type": "Title",
+          "settings": {
+            "title": "<p>Le <em>1e podcast<\/em> français qui brise les <em>tabous<\/em> autour de la maternité<\/p>"
+          }
+        },
+        "description_myR9Xg": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Depuis 2018 et plus de 230 épisodes, Bliss Stories est le podcast maternité où l’on parle de désir d’enfant, de grossesse, d’accouchement et de post-partum sans filtre. Chaque lundi Clémentine Galey reçoit à son micro le témoignage d’une femme qui se raconte sans tabou à travers son expérience de mère.<\/p>"
+          }
+        },
+        "image_podcast_MNqia3": {
+          "type": "image-podcast",
+          "settings": {
+            "image-podcast": "shopify:\/\/shop_images\/Calque_1_2.png",
+            "obligation_text": "Un épisode<br>chaque lundi"
+          }
+        },
+        "image_podcast_c83Yqc": {
+          "type": "image-podcast",
+          "settings": {
+            "image-podcast": "shopify:\/\/shop_images\/Rectangle_1.png",
+            "obligation_text": "Des témoignages<br>de mère sans filtre"
+          }
+        },
+        "image_podcast_8Jfnaw": {
+          "type": "image-podcast",
+          "settings": {
+            "image-podcast": "shopify:\/\/shop_images\/Casque.png",
+            "obligation_text": "70 M écoutes<br>cumulées"
+          }
+        },
+        "button_hYac9A": {
+          "type": "button",
+          "settings": {
+            "button_label": "écouter la bande d’annonce",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_tnKgVb",
+        "description_myR9Xg",
+        "image_podcast_MNqia3",
+        "image_podcast_c83Yqc",
+        "image_podcast_8Jfnaw",
+        "button_hYac9A"
+      ],
+      "settings": {
+        "main-image": "shopify:\/\/shop_images\/CLEM_MICRO_2_1.png",
+        "image_label": "shopify:\/\/shop_images\/bliss_stories_blanc_2.png",
+        "avis": "12 avis sur Apple Podcast",
+        "rating_value": 3,
+        "rating_decimal": 0.5
+      }
+    },
+    "best_episodes_C7w9y6": {
+      "type": "best-episodes",
+      "blocks": {
+        "image_N9cEnj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/COUV_EPISODE.jpg",
+            "episode-url": ""
+          }
+        },
+        "image_8zbrAJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/COUV_EPISODE_2.jpg",
+            "episode-url": ""
+          }
+        },
+        "image_DQ4kxD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/EP_231_ELISSA_INTUITION_EVENTRATION_REPARATION.jpg",
+            "episode-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_N9cEnj",
+        "image_8zbrAJ",
+        "image_DQ4kxD"
+      ],
+      "settings": {
+        "title": "<h2>Les épisodes pour te <em>soutenir<\/em><\/h2>"
+      }
+    },
+    "all_episodes_fffa4A": {
+      "type": "all-episodes",
+      "blocks": {
+        "text_Hmwtjx": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "title": "<h2><em>Tous<\/em> les épisodes<\/h2>"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "text_Hmwtjx"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "episodes-per-page": 6
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
+    "abonner_podcasts_AJnPPF": {
+      "type": "abonner-podcasts",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "image_Wwadp6": {
+          "type": "image",
           "settings": {
-            "collection": ""
+            "image": "shopify:\/\/shop_images\/Layer_1.png"
           }
         },
-        "product": {
-          "type": "product",
+        "image_xR8Cyx": {
+          "type": "image",
           "settings": {
-            "product": "",
-            "second_image": false
+            "image": "shopify:\/\/shop_images\/Calque_1.png"
           }
         },
-        "collection-1": {
-          "type": "collection",
+        "image_eirrkH": {
+          "type": "image",
           "settings": {
-            "collection": ""
+            "image": "shopify:\/\/shop_images\/Calque_1_1.png"
+          }
+        },
+        "image_TifezQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle.png"
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
+        "image_Wwadp6",
+        "image_xR8Cyx",
+        "image_eirrkH",
+        "image_TifezQ"
       ],
       "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "Disponible sur toutes les plateformes d'écoutes",
+        "link": "",
+        "link_text": "s'abonner au podcast"
       }
     },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
+    "new_witness_JRQ8Bk": {
+      "type": "new-witness",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "witness_title_GJb8QL": {
+          "type": "witness-title",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "title": "Tu<br>veux<br>témoigner ?"
           }
         },
-        "column2": {
-          "type": "column",
+        "witness_description_BnKnNH": {
+          "type": "witness-description",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis molestie malesuada. Quisque maximus volutpat leo, sed malesuada massa imperdiet et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis molestie malesuada. Quisque maximus volutpat leo, sed malesuada massa imperdiet et. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>"
           }
         },
-        "column3": {
-          "type": "column",
+        "witness_button_7VVcPe": {
+          "type": "witness-button",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "button-link": "",
+            "button-labbel": "Témoigner"
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "witness_title_GJb8QL",
+        "witness_description_BnKnNH",
+        "witness_button_7VVcPe"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "image": "shopify:\/\/shop_images\/CLEM_MICRO_2_1.png"
       }
     }
   },
   "order": [
     "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "abonner_podcasts_xaPR6H",
+    "podcast_page_3AmaX9",
+    "best_episodes_C7w9y6",
+    "all_episodes_fffa4A",
+    "abonner_podcasts_AJnPPF",
+    "new_witness_JRQ8Bk"
   ]
 }

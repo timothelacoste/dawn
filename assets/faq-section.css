@@ -1,0 +1,44 @@
+.FAQ {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  margin-block: 150px;
+}
+
+.FAQ details:first-child {
+  border-top: 1px solid black;
+}
+
+.FAQ details {
+  border-bottom: 1px solid black;
+  padding-block: 35px;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+summary h2 {
+  margin: 0;
+  color: #000;
+  font-family: 'Helvetica Neue';
+  font-size: 30px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+summary svg {
+  width: 38px;
+}
+
+.FAQ p {
+  color: #000;
+  font-family: 'Helvetica Neue';
+  font-size: 20px;
+  font-weight: 300;
+  line-height: normal;
+}

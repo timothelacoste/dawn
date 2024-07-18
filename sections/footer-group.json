@@ -2,6 +2,110 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "footer_2_WbeUXM": {
+      "type": "footer-2",
+      "blocks": {
+        "footer_top_wnYVkt": {
+          "type": "footer-top",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/facebook-blanc.png",
+            "image_link": ""
+          }
+        },
+        "footer_top_EEKzUy": {
+          "type": "footer-top",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/instagram-blanc.png",
+            "image_link": ""
+          }
+        },
+        "footer_top_WdmmJV": {
+          "type": "footer-top",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/youtube-blanc.png",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer_top_wnYVkt",
+        "footer_top_EEKzUy",
+        "footer_top_WdmmJV"
+      ],
+      "settings": {
+        "title": "Le savoir c’est le pouvoir, reçois chaque semaine ta dose de Bliss en t’inscrivant à la Bliss Letter !"
+      }
+    },
+    "footer_2_subscribe_WjQVbb": {
+      "type": "footer-2-subscribe",
+      "blocks": {
+        "footer_subscribe_7rzJW9": {
+          "type": "footer-subscribe",
+          "settings": {
+            "label": "Email",
+            "placeholder": "S'inscrire à la newsletter",
+            "submit": "Subscribe"
+          }
+        }
+      },
+      "block_order": [
+        "footer_subscribe_7rzJW9"
+      ],
+      "settings": {
+      }
+    },
+    "footer_2_menu_Pb3QX8": {
+      "type": "footer-2-menu",
+      "blocks": {
+        "title_and_list_hVERXT": {
+          "type": "title-and-list",
+          "settings": {
+            "ul_title": "support",
+            "ul_title_link": "",
+            "menu_footer": "footer"
+          }
+        },
+        "title_and_list_KpG9yN": {
+          "type": "title-and-list",
+          "settings": {
+            "ul_title": "à propos",
+            "ul_title_link": "",
+            "menu_footer": "footer-menu-2"
+          }
+        },
+        "title_and_list_ypMbGw": {
+          "type": "title-and-list",
+          "settings": {
+            "ul_title": "BTOB",
+            "ul_title_link": "",
+            "menu_footer": "footer-menu-3"
+          }
+        }
+      },
+      "block_order": [
+        "title_and_list_hVERXT",
+        "title_and_list_KpG9yN",
+        "title_and_list_ypMbGw"
+      ],
+      "settings": {
+      }
+    },
+    "footer_2_bottom_MHAgR4": {
+      "type": "footer-2-bottom",
+      "blocks": {
+        "footer_bottom_kFRRJV": {
+          "type": "footer-bottom",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/bliss.png"
+          }
+        }
+      },
+      "block_order": [
+        "footer_bottom_kFRRJV"
+      ],
+      "settings": {
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -32,10 +136,12 @@
         "footer-1",
         "footer-2"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
@@ -48,6 +154,10 @@
     }
   },
   "order": [
+    "footer_2_WbeUXM",
+    "footer_2_subscribe_WjQVbb",
+    "footer_2_menu_Pb3QX8",
+    "footer_2_bottom_MHAgR4",
     "footer"
   ]
 }

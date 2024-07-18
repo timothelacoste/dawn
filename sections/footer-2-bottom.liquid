@@ -1,0 +1,36 @@
+{{ 'footer-2-bottom.css' | asset_url | stylesheet_tag }}
+
+<div class="footer-bottom">
+  {% for block in section.blocks %}
+    <img src="{{ block.settings.logo | image_url }}" alt="Logo-Bliss" height="" width="">
+    <div>Copyright © {{ 'now' | date: '%Y' }} BLISS STUDIO</div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Footer Bottom",
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "blocks": [
+    {
+      "name": "footer-bottom",
+      "type": "footer-bottom",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer Bottom",
+      "category": "Footer"
+    }
+  ]
+}
+{% endschema %}

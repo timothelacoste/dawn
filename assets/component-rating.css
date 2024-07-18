@@ -41,6 +41,7 @@
     rgba(var(--color-foreground), 0.15) var(--percent)
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

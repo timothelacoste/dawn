@@ -1,0 +1,56 @@
+{{ 'our-stories-content.css' | asset_url | stylesheet_tag }}
+
+<div class="stories-grid">
+  {% for block in section.blocks %}
+    <a href="{{ block.settings.url }}">
+      <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.title }}" height="" width="">
+      <div class="stories-description">
+        {% if block.settings.title == blank %}
+          <h3 style="display: none;">{{ block.settings.title }}</h3>
+        {% else %}
+          <h3>{{ block.settings.title }}</h3>
+        {% endif %}
+        <p>{{ block.settings.description }}</p>
+      </div>
+    </a>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "A story",
+  "blocks": [
+    {
+      "type": "a-story",
+      "name": "A story",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A-story"
+    }
+  ]
+}
+{% endschema %}

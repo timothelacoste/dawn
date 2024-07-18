@@ -1,0 +1,97 @@
+.footer-subscribe {
+  background-color: #fa5c30;
+  display: flex;
+  padding: 0px 300px 95px 65px;
+}
+
+.subscribe {
+  display: flex;
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .subscribe {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.subscribe label {
+  padding: 30px 70px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 40px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe label {
+    padding-block: 20px;
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .subscribe label {
+    padding-block: 20px;
+    font-size: 30px;
+  }
+}
+
+.email {
+  padding: 0px 0px 0px 40px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 30px;
+  font-weight: 300;
+  background: #fa5c30;
+  flex: 1;
+}
+
+.email:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .email {
+    font-size: 20px;
+    padding-block: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe label {
+    padding-block: 20px;
+    font-size: 30px;
+  }
+}
+
+.footer-submit {
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 40px;
+  background: #fa5c30;
+  padding: 30px 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-submit {
+    font-size: 30px;
+    padding-block: 20px;
+  }
+}
+
+.footer-submit:hover {
+  background: #fff9ed;
+  color: #fa5c30;
+}
+
+::placeholder {
+  color: #fff;
+  font-family: Helvetica;
+  font-size: 30px;
+  font-weight: 300;
+}

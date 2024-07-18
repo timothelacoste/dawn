@@ -1,0 +1,57 @@
+.maternite-text {
+  color: #fff9ed;
+  font-family: 'ITC Avant Garde Gothic Pro';
+  font-size: 122px;
+  font-weight: 500;
+  position: absolute;
+  text-align: center;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .maternite-text {
+    font-size: 35px;
+  }
+}
+
+.rapport-maternite .interview {
+  color: #fff9ed;
+  font-family: 'Linotype-Didot';
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  right: 350px;
+}
+
+@media screen and (max-width: 768px) {
+  .rapport-maternite .interview {
+    font-size: 20px;
+  }
+}
+
+.rapport-maternite em {
+  color: #fff9ed;
+  font-family: 'Linotype-Didot';
+  font-size: 145px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .rapport-maternite em {
+    font-size: 35px;
+  }
+}
+.rapport-maternite img {
+  width: 100%;
+  position: relative;
+}
+
+.rapport-maternite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}

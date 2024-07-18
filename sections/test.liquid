@@ -1,0 +1,77 @@
+{{ 'test.css' | asset_url | stylesheet_tag }}
+
+<section class="test"></section>
+
+<div class="all-test">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'heading' %}
+        <h2>{{ block.settings.title }}</h2>
+      {% when 'text' %}
+        <p>{{ block.settings.description }}</p>
+      {% when 'image' %}
+        <img src="{{ block.settings.image | image_url }}" alt="Image" height="" width="">
+      {% when 'ul' %}
+        <ul>
+          <li>{{ block.settings.items }}</li>
+        </ul>
+    {% endcase %}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Test",
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "name": "List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "items",
+          "label": "Items"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Test"
+    }
+  ]
+}
+{% endschema %}

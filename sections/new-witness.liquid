@@ -1,0 +1,94 @@
+{{ 'new-witness.css' | asset_url | stylesheet_tag }}
+
+<section class="new-witness">
+  <div class="left-side-witness">
+    <div class="witness-image">
+      <img
+        src="{{ section.settings.image | image_url }}"
+        alt="{{section.settings.image.alt}}"
+        height="{{ section.settings.image.height }}"
+        width="{{ section.settings.image.width }}"
+      >
+    </div>
+  </div>
+  <div class="right-side-witness">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'witness-title' %}
+          <div class="witness-title">
+            <h2>{{ block.settings.title }}</h2>
+          </div>
+        {% when 'witness-description' %}
+          <div class="witness-description">
+            {{ block.settings.description }}
+          </div>
+        {% when 'witness-button' %}
+          <div class="witness-button">
+            <a href="{{ block.settings.button-link }}">{{ block.settings['button-labbel'] }}</a>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "New Witness",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "witness-title",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre",
+          "default": "Tu veux témoigner ?"
+        }
+      ]
+    },
+    {
+      "type": "witness-description",
+      "name": "Description",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Un témoignage est un récit oral ou écrit d'un événement ou d'une expérience vécue par une personne. Il peut être utilisé dans le cadre d'une enquête, d'un procès ou d'une recherche. Les témoignages sont souvent utilisés pour établir des faits ou des preuves dans une affaire judiciaire ou pour documenter des événements historiques.</p>"
+        }
+      ]
+    },
+    {
+      "type": "witness-button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "url",
+          "id": "button-link",
+          "label": "Button link"
+        },
+        {
+          "type": "text",
+          "id": "button-labbel",
+          "label": "Button label",
+          "default": "Témoigner"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Witness"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,188 @@
+{{ 'product-page.css' | asset_url | stylesheet_tag }}
+
+<section class="product-detail">
+  <div class="all-image">
+    {% for block in section.blocks %}
+      {% if block.type == 'main-image' %}
+        <div class="main-image">
+          <img src="{{ block.settings.main-image | image_url }}" alt="{{ block.settings.title }}" height="" width="">
+        </div>
+      {% endif %}
+    {% endfor %}
+    <div class="small-image">
+      {% for block in section.blocks %}
+        {% if block.type == 'other-image' %}
+          <div class="other-image">
+            <img src="{{ block.settings.other-image | image_url }}" alt="{{ block.settings.title }}" height="" width="">
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="product-top">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'title' %}
+          <h1>{{ block.settings.title }}</h1>
+          <div class="product-recommendation">
+            {% assign rating_value = block.settings.rating_value | plus: 0 %}
+            {% assign rating_decimal = block.settings.rating_decimal | plus: 0 %}
+            <div class="rating-star" style="--rating: {{ rating_value }}; --rating-decimal: {{ rating_decimal }};">
+              <span class="visually-hidden">Rating: {{ rating_value }}.{{ rating_decimal }}</span>
+              <p class="product-avis">({{ block.settings.avis }})</p>
+            </div>
+          </div>
+          <div class="product-cost">{{ block.settings.price | money }}</div>
+        {% when 'subtitle' %}
+          <h2>{{ block.settings.subtitle }}</h2>
+        {% when 'description' %}
+          <p class="p-description">{{ block.settings.description }}</p>
+        {% when 'actual-offer' %}
+          <p class="actual-offer">{{ block.settings['actual-offer'] }}</p>
+          <div class="all-advantage">
+        {% when 'advantage-product' %}
+          <div class="advantage-product">
+            <div>
+              <img
+                src="{{ block.settings.image-gift | image_url }}"
+                alt="{{ block.settings.cadeau }}"
+                height=""
+                width=""
+              >
+              <div class="text-cadeau">{{ block.settings.cadeau }}</div>
+            </div>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <form class="product-quantity">
+    <!-- mettre la quantité -->
+    <input class="quantity" type="number" min="1" value="1">
+    <input class="submit" type="submit" value="AJOUTER AU PANIER">
+  </form>
+</section>
+
+{% schema %}
+{
+  "name": "Product page",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "main-image",
+      "name": "Main image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "main-image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "other-image",
+      "name": "Other image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "other-image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "title",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "range",
+          "id": "rating_value",
+          "label": "Rating Value",
+          "default": 4,
+          "min": 0,
+          "max": 5,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "rating_decimal",
+          "label": "Rating Decimal",
+          "default": 0,
+          "min": 0,
+          "max": 0.9,
+          "step": 0.1
+        },
+        {
+          "type": "text",
+          "id": "avis",
+          "label": "Reviews"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price"
+        }
+      ]
+    },
+    {
+      "type": "subtitle",
+      "name": "Subtitle",
+      "settings": [
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "actual-offer",
+      "name": "Actual offer",
+      "settings": [
+        {
+          "type": "text",
+          "id": "actual-offer",
+          "label": "Actual offer"
+        }
+      ]
+    },
+    {
+      "type": "advantage-product",
+      "name": "Advantage product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image-gift",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "cadeau",
+          "label": "Cadeau"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product page",
+      "category": "Product page"
+    }
+  ]
+}
+{% endschema %}

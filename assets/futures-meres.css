@@ -1,0 +1,120 @@
+:root {
+  --color-Black: #000;
+  --color-foreground: 255, 215, 0; /* Gold color */
+  --font-Helvetica: 'Helvetica', sans-serif;
+  --font-Helvetica-Neue: 'Helvetica Neue', sans-serif;
+  --font-Linotype-Didot: 'Linotype Didot', serif;
+}
+
+.products {
+  margin-bottom: 130px;
+}
+
+.product a {
+  text-decoration: none;
+}
+
+.products h2 {
+  color: var(--color-Black);
+  font-family: var(--font-Helvetica);
+  font-size: 60px;
+  margin-block: 90px;
+  margin-left: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .products h2 {
+    font-size: 30px;
+    margin: 30px 0px 30px 30px;
+  }
+}
+
+.products h3 {
+  color: var(--color-Black);
+  font-family: var(--font-Helvetica-Neue);
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0px 0px 0px;
+}
+
+.products em {
+  color: var(--color-Black);
+  font-family: var(--font-Linotype-Didot);
+  font-size: 65px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .products em {
+    font-size: 30px;
+  }
+}
+
+.products img {
+  width: 100%;
+}
+
+.rating-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.rating-star {
+  display: flex !important;
+}
+
+.rating-star::before {
+  --percent: calc((var(--rating) + var(--rating-decimal)) * 20%);
+  font-size: 30px;
+  background: linear-gradient(
+    90deg,
+    rgb(var(--color-foreground)) var(--percent),
+    rgba(var(--color-foreground), 0.2) var(--percent)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Times;
+  content: '★★★★★';
+}
+
+.products-grid p {
+  color: var(--color-Black);
+  font-family: var(--font-Helvetica-Neue);
+  font-size: 18px;
+  margin: 0px 0px 0px 15px;
+  display: flex;
+}
+
+.products-grid {
+  gap: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-inline: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-best {
+  color: var(--color-Black);
+  text-align: center;
+  font-family: var(--font-Helvetica-Neue);
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 110px;
+  border: 1px solid var(--color-Black);
+  background: none;
+  position: absolute;
+  padding: 5px 20px;
+  margin-left: 30px;
+  margin-top: 45px;
+}
+
+.products-avis {
+  align-items: center;
+}

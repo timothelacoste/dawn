@@ -1,0 +1,13 @@
+.footer-bottom {
+  background-color: #fa5c30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 65px 30px 65px;
+}
+
+.footer-bottom div {
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 25px;
+}

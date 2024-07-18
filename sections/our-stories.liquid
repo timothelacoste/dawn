@@ -1,0 +1,47 @@
+{{ 'our-stories.css' | asset_url | stylesheet_tag }}
+
+<section class="stories" id="stories">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'heading' -%}
+        <h2>{{ block.settings.title }}</h2>
+      {%- when 'paragraph' -%}
+        <p>{{ block.settings.paragraph }}</p>
+    {%- endcase -%}
+  {%- endfor -%}
+</section>
+
+{% schema %}
+{
+  "name": "Our-stories",
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "paragraph",
+          "label": "paragraph"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our-stories"
+    }
+  ]
+}
+{% endschema %}

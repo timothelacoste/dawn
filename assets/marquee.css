@@ -1,0 +1,31 @@
+.marquees {
+  white-space: nowrap;
+  animation: marquee-rotate 15s linear infinite;
+  display: flex;
+  gap: 60px;
+  padding-left: 60px;
+  max-height: 150px;
+  align-items: center;
+}
+
+@keyframes marquee-rotate {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.marquee-text {
+  color: #2f2f2f;
+  font-family: Helvetica;
+  font-size: 50px;
+}
+
+.marquee-text em {
+  font-family: 'Linotype Didot';
+  font-size: 55px;
+  font-style: italic;
+  font-weight: 500;
+}

@@ -1,0 +1,50 @@
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+  }
+}
+
+.footer {
+  background-color: #fa5c30;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  padding-block: 95px;
+  padding-inline: 65px;
+}
+
+.footer-bottom img {
+  align-items: center;
+  min-width: 100px;
+}
+
+.footer h2 {
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 62px;
+  max-width: 70%;
+  margin: 0;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .footer h2 {
+    font-size: 40px;
+    max-width: 90%;
+  }
+}
+
+.footer-icons {
+  display: flex;
+}
+
+.footer-icons img {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+}

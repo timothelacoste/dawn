@@ -1,0 +1,49 @@
+.best-episodes {
+  padding: 55px 70px 300px 70px;
+  background-color: #fbf9f3;
+  overflow: hidden;
+}
+
+.best-episodes h2 {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 60px;
+  line-height: normal;
+  margin-bottom: 100px;
+}
+
+.best-episodes h2 em {
+  color: #000;
+  font-family: 'Linotype Didot';
+  font-size: 67px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  display: none;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 30px;
+  color: #fff;
+}

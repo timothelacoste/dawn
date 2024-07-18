@@ -1,0 +1,45 @@
+{{ 'faq-section.css' | asset_url | stylesheet_tag }}
+
+<section class="FAQ">
+  {% for block in section.blocks %}
+    <details>
+      <summary>
+        <h2>{{ block.settings.question }}</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="44" viewBox="0 0 80 44" fill="none">
+          <path d="M2 2.28125L40 40.2812L78 2.28125" stroke="black" stroke-width="5"/>
+        </svg>
+      </summary>
+      <p>{{ block.settings.answer }}</p>
+    </details>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,166 @@
+.product-avis {
+  color: #000;
+  text-align: center;
+  font-family: 'Herlvetica-Neue';
+  font-size: 18px;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-inline: 70px;
+  gap: 80px;
+}
+
+.all-image {
+  display: flex;
+  gap: 10px;
+}
+
+.main-image {
+  display: flex;
+}
+
+.main-image img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.small-image {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.other-image img {
+  display: flex;
+  max-width: 100px;
+}
+
+.product-detail h1 {
+  display: flex;
+  line-height: normal;
+  color: #000;
+  text-transform: uppercase;
+  font-family: 'Herlvetica-Neue';
+  font-size: 36px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.product-recomendation {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.product-cost {
+  color: #000;
+  font-family: 'Helvetica';
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.product-top h2 {
+  color: #000;
+  font-family: 'Helvetica Neue';
+  font-size: 25px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0px 0px 10px 0px;
+}
+
+.main-product-description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-block: 40px;
+  line-height: normal;
+}
+
+.actual-offer {
+  color: #fa5c30;
+  font-family: 'Herlvetica-Neue';
+  font-size: 20px;
+  font-style: italic;
+  text-decoration-line: underline;
+  text-underline-offset: 5px;
+  line-height: 25px;
+  margin: 20px 0px 0px 0px;
+}
+
+.p-description {
+  color: #000;
+  font-family: 'Herlvetica-Neue';
+  font-size: 25px;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+}
+
+.all-advantage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  text-align: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.advantage-product {
+  display: flex;
+}
+
+.advantage-product img {
+  height: 80px;
+  width: 80px;
+}
+
+.product-quantity {
+  margin-top: 40px;
+}
+
+.product-quantity .submit {
+  color: #000;
+  text-align: center;
+  font-family: 'Bodoni';
+  font-size: 20px;
+  border-radius: 110px;
+  border: 1px solid #000;
+  background: #fff;
+  padding: 10px 40px;
+}
+
+.product-quantity .submit:hover {
+  background: #fa5c30;
+  color: #fff;
+  border: none;
+  margin: 1px;
+}
+
+.rating-star {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rating-star::before {
+  --percent: calc((var(--rating) + var(--rating-decimal)) * 20%);
+  font-size: 30px;
+  background: linear-gradient(90deg, #ffd700 var(--percent), #2f2f2f var(--percent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Times;
+  content: '★★★★★';
+}
+
+.text-cadeau {
+  color: #000;
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+}

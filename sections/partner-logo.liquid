@@ -1,0 +1,32 @@
+{{ 'partner-logo.css' | asset_url | stylesheet_tag }}
+
+<section class="partner-logo">
+  {% for block in section.blocks %}
+    <img src="{{ block.settings.image | image_url}}" alt="" height="" width="">
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Partner Logo",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Partner Logo",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

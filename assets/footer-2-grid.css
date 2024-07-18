@@ -1,0 +1,41 @@
+.footer-grid {
+  display: grid;
+  background-color: #fa5c30;
+  grid-template-columns: repeat(3, 1fr);
+  color: #fff;
+  font-family: 'Helvetica-Neue';
+  font-size: 26px;
+  font-weight: 300;
+  gap: 200px;
+  padding: 0px 0px 0px 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-grid h3 {
+  margin: 0px 0px 10px 0px;
+  font-family: 'Helvetica-Neue';
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: normal;
+}
+
+.footer-grid ul {
+  color: #fff;
+  font-family: 'Helvetica Neue';
+  font-size: 25px;
+  font-weight: 300;
+  padding: 0;
+  line-height: normal;
+  list-style: none;
+}
+
+.footer-grid a {
+  color: #fff;
+  text-decoration: none;
+}

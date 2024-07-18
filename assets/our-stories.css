@@ -1,0 +1,28 @@
+.stories h2 {
+  color: #2f2f2f;
+  font-family: 'Helvetica';
+  font-size: 60px;
+  margin-block: 90px;
+  margin-left: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .stories h2 {
+    font-size: 30px;
+    margin: 30px 0px 30px 30px;
+  }
+}
+
+.stories em {
+  color: #2f2f2f;
+  font-family: 'Linotype-Didot';
+  font-size: 65px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .stories em {
+    font-size: 30px;
+  }
+}

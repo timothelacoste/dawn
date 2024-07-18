@@ -1,0 +1,40 @@
+.situation-slide {
+  padding: 0px 100px 150px 100px;
+  background-color: #fff9ed;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide div {
+  color: #fff9ed;
+  font-family: 'ITC Avant Garde Gothic Pro';
+  font-size: 45px;
+  font-weight: 500;
+  position: absolute;
+}
+
+.swiper-slide img {
+  position: relative;
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  display: none;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 30px;
+  color: #fff;
+}

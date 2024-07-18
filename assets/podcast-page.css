@@ -1,0 +1,144 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.podcast-details {
+  padding: 115px 100px 100px 120px;
+  display: flex;
+  gap: 80px;
+}
+
+.all-image {
+  display: flex;
+}
+
+.image-label {
+  width: 224px;
+  height: 224px;
+  left: 455px;
+  position: absolute;
+}
+
+.main-image {
+  width: 560px;
+  height: 100%;
+  position: relative;
+}
+
+.podcast-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 60px;
+}
+
+.podcast-top h1 {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.podcast-top em {
+  color: #000;
+  font-family: 'Linotype Didot';
+  font-size: 65px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.podcast-recommendation {
+  display: flex;
+  width: 100%;
+}
+
+.podcast-avis {
+  color: #000;
+  font-family: 'Helvetica Neue';
+  font-size: 25px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.description-text {
+  color: #000;
+  font-family: 'Helvetica Neue';
+  font-size: 25px;
+  font-weight: 300;
+  line-height: normal;
+  margin: 40px 0px 0px 0px;
+}
+
+.our-obligation-podcast {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+  align-items: flex-start;
+  margin-block: 80px;
+}
+
+.image-podcast {
+  justify-content: center;
+  display: flex;
+}
+
+.image-podcast img {
+  width: 61px;
+  height: 61px;
+}
+
+.obligation-text {
+  color: #000;
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  font-size: 18px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.button-link {
+  width: fit-content;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  font-family: 'Bodoni';
+  font-size: 20px;
+  border-radius: 110px;
+  border: 1px solid #000;
+  background: #fff;
+  padding: 10px 40px;
+}
+
+.button-link:hover {
+  background: #fa5c30;
+  color: #fff;
+  border: none;
+  margin: 1px;
+}
+
+.rating-star {
+  display: flex !important;
+  align-items: center;
+  gap: 15px;
+}
+
+.rating-star::before {
+  --percent: calc((var(--rating) + var(--rating-decimal)) * 20%);
+  font-size: 40px;
+  background: linear-gradient(90deg, #ffd700 var(--percent), #2f2f2f var(--percent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Times;
+  content: '★★★★★';
+}

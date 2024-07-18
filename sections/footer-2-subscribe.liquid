@@ -1,0 +1,52 @@
+{{ 'footer-2-subscribe.css' | asset_url | stylesheet_tag }}
+
+<div class="footer-subscribe">
+  {% for block in section.blocks %}
+    <form class="subscribe" method="get" action="">
+      <label for="email">{{ block.settings.label }}</label>
+      <input class="email" type="email" id="email" name="email" placeholder="{{block.settings.placeholder}}" required>
+      <input class="footer-submit" type="submit" value="{{block.settings.submit}}">
+    </form>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Footer Subscribe",
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "blocks": [
+    {
+      "name": "footer-subscribe",
+      "type": "footer-subscribe",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "label",
+          "default": "Email"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder",
+          "default": "S'inscrire à la newsletter"
+        },
+        {
+          "type": "text",
+          "id": "submit",
+          "label": "Submit",
+          "default": "Subscribe"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer Subscribe",
+      "category": "Footer"
+    }
+  ]
+}
+{% endschema %}

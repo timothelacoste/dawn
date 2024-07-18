@@ -1,0 +1,53 @@
+.all-episodes {
+  padding: 80px 70px 100px 70px;
+}
+
+.all-episodes h2 {
+  color: #000;
+  font-family: 'Linotype Didot';
+  font-size: 67px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+
+.all-episodes h2 em {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 60px;
+  line-height: normal;
+}
+
+.list-episode ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 50px;
+  column-gap: 50px;
+  margin-bottom: 100px;
+  list-style: none;
+  padding: 0;
+}
+
+.list-episode img {
+  width: 100%;
+  height: 100%;
+}
+
+.list-episode a {
+  text-decoration: none;
+}
+
+.pagination-wrapper ul {
+  row-gap: 30px;
+  list-style: none;
+}
+
+.pagination__item {
+  font-size: 30px;
+}
+
+.pagination__item--prev .icon {
+  min-height: 20px;
+  min-width: 20px;
+}

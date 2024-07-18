@@ -1,0 +1,64 @@
+{{ 'footer-2-grid.css' | asset_url | stylesheet_tag }}
+
+<div class="footer-grid">
+  {% for block in section.blocks %}
+    {% if block.type == 'title-and-list' %}
+      <div>
+        <h3>
+          <a href="{{ block.settings.ul_title_link }}">{{ block.settings.ul_title }}</a>
+        </h3>
+        <ul>
+          {% for link in linklists[block.settings.menu_footer].links %}
+            <li>
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Footer Menu",
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "title-and-list",
+      "name": "Title and List Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "ul_title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "ul_title_link",
+          "label": "Title Link"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_footer",
+          "label": "Footer Menu"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer Menu",
+      "category": "Footer",
+      "blocks": [
+        {
+          "type": "title-and-list"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

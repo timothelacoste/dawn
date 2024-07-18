@@ -1,0 +1,59 @@
+{{ 'all-episodes.css' | asset_url | stylesheet_tag }}
+
+<section class="all-episodes">
+  {% paginate shop.metaobjects.episodes.values by section.settings['episodes-per-page'] %}
+    {% for block in section.blocks %}
+      {{ block.settings.title }}
+    {% endfor %}
+    <div class="list-episode">
+      <ul>
+        {% for metaobject in shop.metaobjects.episodes.values %}
+          <li>
+            <a href="{{ shop.url }}/pages/{{ metaobject.system.type }}/{{ metaobject.system.handle }}">
+              <img src="{{ metaobject.image | image_url }}" alt="{{ metaobject.name }}" height="" width="">
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% if paginate.pages > 1 %}
+      {% render 'pagination', paginate: paginate %}
+    {% endif %}
+  {% endpaginate %}
+</section>
+
+{% schema %}
+{
+  "name": "All Episodes",
+  "settings": [
+    {
+      "type": "range",
+      "id": "episodes-per-page",
+      "label": "Episodes per page",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "default": 6
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "<h2>Tous les épisodes</h2>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "All Episodes"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,47 @@
+{{ 'situation.css' | asset_url | stylesheet_tag }}
+
+<section class="situation" id="situation">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'heading' -%}
+        <h2>{{ block.settings.title }}</h2>
+      {%- when 'paragraph' -%}
+        <p>{{ block.settings.description }}</p>
+    {%- endcase -%}
+  {%- endfor -%}
+</section>
+
+{% schema %}
+{
+  "name": "Situation",
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Situation"
+    }
+  ]
+}
+{% endschema %}
