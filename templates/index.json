@@ -264,6 +264,12 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/CLEM_MICRO_2_1.png"
       }
+    },
+    "sticky_button_kymKGQ": {
+      "type": "sticky-button",
+      "settings": {
+        "sticky-button-label": "Ajouter au panier"
+      }
     }
   },
   "order": [
@@ -273,6 +279,7 @@
     "best_episodes_C7w9y6",
     "all_episodes_fffa4A",
     "abonner_podcasts_AJnPPF",
-    "new_witness_JRQ8Bk"
+    "new_witness_JRQ8Bk",
+    "sticky_button_kymKGQ"
   ]
 }

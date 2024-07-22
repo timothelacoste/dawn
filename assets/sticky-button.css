@@ -1,0 +1,29 @@
+#addToCartForm {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-input {
+  width: 50px;
+  padding: 5px;
+}
+
+#addToCartButton,
+[id^='ProductSubmitButton-'] {
+  background-color: #f90;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 110px;
+}
+
+#addToCartForm {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
+}

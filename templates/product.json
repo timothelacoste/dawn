@@ -256,6 +256,12 @@
       "type": "be-to-be",
       "settings": {
       }
+    },
+    "sticky_button_DEEeUr": {
+      "type": "sticky-button",
+      "settings": {
+        "sticky-button-label": "Ajouter au panier"
+      }
     }
   },
   "order": [
@@ -266,6 +272,7 @@
     "pre_order_DhWLMe",
     "related-products",
     "add_to_cart_PkAMPY",
-    "be_to_be_WrkXtx"
+    "be_to_be_WrkXtx",
+    "sticky_button_DEEeUr"
   ]
 }

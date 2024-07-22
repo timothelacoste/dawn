@@ -1,10 +1,11 @@
 {{ 'sticky-button.css' | asset_url | stylesheet_tag }}
 
 <div class="sticky-button">
-  <form action="{{ routes.cart_url }}" method="post" id="addToCartForm">
+  <form action="/cart/add" method="post" id="addToCartForm">
     <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-    <input type="number" name="quantity" value="1" min="1" class="quantity-input">
-    <button type="submit" id="addToCartButton">{{ section.settings['sticky-button-label'] }}</button>
+    <button type="submit" id="ProductSubmitButton-{{ section_id }}">
+      {{ section.settings['sticky-button-label'] }}
+    </button>
   </form>
 </div>
 
