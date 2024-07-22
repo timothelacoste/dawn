@@ -1,26 +1,65 @@
+<link rel="stylesheet" href="{{ 'be-to-be-menu.css' | asset_url }}">
+
 {% assign menu_be_to_be_handle = 'menu-be-to-be' %}
 {% assign main_menu_handle = 'main-menu' %}
 
-{% if customer %}
-  {% unless customer.tags contains 'be to be' %}
-    <meta http-equiv="refresh" content="0;url='/'">
-  {% endunless %}
-{% endif %}
+{% comment %}
+  {% if customer %}
+    {% unless customer.tags contains 'be to be' %}
+      <script>
+        window.location.href = '/';
+      </script>
+    {% endunless %}
+  {% endif %}
+{% endcomment %}
 
 <div class="header-menu">
-  <ul>
+  <ul class="main-ul">
     {% assign main_menu_links = linklists[main_menu_handle] %}
     {% for link in main_menu_links.links %}
-      <li>
-        <a href="{{ link.url }}">{{ link.title }}</a>
+      <li class="main-li {% if link.links %}has-submenu{% endif %}">
+        <a class="main-a" href="{{ link.url }}">
+          {{- link.title }}
+          {% if link.links %}
+            <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+            </svg>
+          {% endif %}
+        </a>
+        {% if link.links %}
+          <ul class="second-ul">
+            {% for sublink in link.links %}
+              <li class="second-li">
+                <a class="second-a" href="{{ sublink.url }}">{{ sublink.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </li>
     {% endfor %}
+
     {% if customer.tags contains 'be to be' %}
       {% if customer %}
         {% assign be_to_be_links = linklists[menu_be_to_be_handle] %}
         {% for link in be_to_be_links.links %}
-          <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
+          <li class="main-li">
+            <a class="main-a" href="{{ link.url }}">
+              {{- link.title }}
+              {% if link.links %}
+                <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+                </svg>
+              {% endif %}
+            </a>
+            {% if link.links %}
+              <ul class="second-ul">
+                {% for sublink in link.links %}
+                  <li class="second-li">
+                    <a class="second-a" href="{{ sublink.url }}">{{ sublink.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
           </li>
         {% endfor %}
       {% endif %}

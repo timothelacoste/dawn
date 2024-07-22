@@ -1,0 +1,76 @@
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.header-menu svg {
+  width: 10px;
+  color: #000;
+  display: none;
+}
+
+.header-menu ul {
+  padding: 0;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.main-ul {
+  display: flex;
+  gap: 20px;
+}
+
+.second-ul {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+}
+
+.header-menu li {
+  position: relative;
+}
+
+.main-li a {
+  color: #00f;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 25px;
+  line-height: normal;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.second-li {
+  padding: 5px 15px;
+}
+
+.second-li a {
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.main-li:hover .main-a {
+  color: red;
+}
+
+.main-li:hover .second-ul {
+  width: max-content;
+  background-color: white;
+  display: flex;
+  padding-top: 10px;
+}
+
+.second-li:hover .second-a {
+  color: red;
+}
+
+.main-li.has-submenu > .main-a > .icon-caret {
+  display: inline;
+}
