@@ -1,13 +1,18 @@
 {{ 'sticky-button.css' | asset_url | stylesheet_tag }}
 
-<div class="sticky-button">
-  <form action="/cart/add" method="post" id="addToCartForm">
+<section class="sticky-button">
+  <div class="sticky-product">
+    <img src="{{ product.featured_image.src | image_url }}" alt="{{ product.title }}" height="" width="">
+    <h2>{{ product.title }}</h2>
+  </div>
+  <form action="/cart/add" method="post" id="stickyaddToCartForm">
     <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-    <button type="submit" id="ProductSubmitButton-{{ section_id }}">
-      {{ section.settings['sticky-button-label'] }}
+    <button type="submit" id="stickyProductSubmitButton-{{ section_id }}">
+      {{ section.settings['sticky-button-label'] }} -
+      {{ product.price | money | remove: ',00' }}
     </button>
   </form>
-</div>
+</section>
 
 {% schema %}
 {
@@ -22,8 +27,7 @@
   ],
   "presets": [
     {
-      "name": "Sticky button",
-      "category": "Product page"
+      "name": "Sticky button"
     }
   ]
 }

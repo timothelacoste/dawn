@@ -1,29 +1,74 @@
-#addToCartForm {
+.sticky-button {
+  background-color: white;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  height: 150px;
+  z-index: 20;
+}
+
+.sticky-product img {
+  height: 130px;
+  width: auto;
+}
+
+.sticky-product {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sticky-product h2 {
+  color: #000;
+  font-family: 'Helvetica Neue';
+  font-size: 30px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#stickyaddToCartForm {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: end;
 }
 
-.quantity-input {
-  width: 50px;
-  padding: 5px;
-}
-
-#addToCartButton,
-[id^='ProductSubmitButton-'] {
+#stickyaddToCartButton,
+[id^='stickyProductSubmitButton-'] {
   background-color: #f90;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 15px 120px;
   cursor: pointer;
   font-size: 20px;
   text-transform: uppercase;
   border-radius: 110px;
 }
 
-#addToCartForm {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 20;
+@media screen and (max-width: 1060px) {
+  .sticky-button {
+    justify-content: center;
+    flex-direction: column;
+  }
+  #stickyaddToCartForm {
+    justify-content: center;
+  }
+  .sticky-product {
+    justify-content: center;
+  }
+  .sticky-product img {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .sticky-product {
+    display: none;
+  }
+  .sticky-button {
+    height: 100px;
+  }
 }
