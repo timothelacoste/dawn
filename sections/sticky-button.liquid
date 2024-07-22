@@ -1,0 +1,29 @@
+{{ 'sticky-button.css' | asset_url | stylesheet_tag }}
+
+<div class="sticky-button">
+  <form action="{{ routes.cart_url }}" method="post" id="addToCartForm">
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+    <input type="number" name="quantity" value="1" min="1" class="quantity-input">
+    <button type="submit" id="addToCartButton">{{ section.settings['sticky-button-label'] }}</button>
+  </form>
+</div>
+
+{% schema %}
+{
+  "name": "Sticky button",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sticky-button-label",
+      "label": "Button label",
+      "default": "Ajouter au panier"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sticky button",
+      "category": "Product page"
+    }
+  ]
+}
+{% endschema %}
