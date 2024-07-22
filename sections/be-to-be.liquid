@@ -1,6 +1,12 @@
 {% assign menu_be_to_be_handle = 'menu-be-to-be' %}
 {% assign main_menu_handle = 'main-menu' %}
 
+{% if customer %}
+  {% unless customer.tags contains 'be to be' %}
+    <meta http-equiv="refresh" content="0;url='/'">
+  {% endunless %}
+{% endif %}
+
 <div class="header-menu">
   <ul>
     {% assign main_menu_links = linklists[main_menu_handle] %}
